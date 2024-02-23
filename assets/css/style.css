@@ -1,0 +1,51 @@
+body {
+    background-image: url('../images/moon.jpg');
+}
+
+.container {
+    position: relative;
+    width: 600px;
+    height: 500px;
+    margin: 100px auto;
+    overflow: hidden;
+  }
+  
+  .image1, .image2 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  .image1 {
+    background-image: url('../images/rocket.svg');
+    animation-name: moveRight;
+    top: 0;
+  }
+  
+  .image2 {
+    background-image: url('../images/rocket2.svg');
+    animation-name: moveLeft;
+    top:80px;
+  }
+  
+  @keyframes moveRight {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: 85%;
+    }
+  }
+  
+  @keyframes moveLeft {
+    0% {
+      left: 85%;
+    }
+    100% {
+      left: 0;
+    }
+  }
